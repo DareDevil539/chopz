@@ -1,19 +1,25 @@
 <template>
   <div id="app">
     <Navbar />
-    <Carousel />
+    <router-view class="content"></router-view>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar";
-import Carousel from "./components/Carousel";
-
+import Footer from "./components/Footer";
 export default {
   name: "App",
   components: {
     Navbar,
-    Carousel
+    Footer
   }
 };
 </script>
+
+<style lang="scss">
+.content {
+  min-height: 90vh;
+}
+</style>
